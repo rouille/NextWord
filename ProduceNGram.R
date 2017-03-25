@@ -27,7 +27,7 @@ clean <- iconv(clean, "UTF-8", "ASCII", sub = "")
 ## white spaces
 clean <- stripWhitespace(clean)
 
-## profanity
+## profanity. Remove entire entry when encountered.
 badwords <- readLines("badwords.txt", skipNul = TRUE, encoding = "UTF-8")
 for (i in seq(length(badwords) ) ) {
     index <- grep(badwords[i], clean)

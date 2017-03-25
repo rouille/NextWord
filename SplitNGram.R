@@ -7,7 +7,6 @@ load("threegram.RData")
 load("fourgram.RData")
 load("fivegram.RData")
 
-require("tm")
 require("ngram")
 require("data.table")
 
@@ -41,4 +40,4 @@ threegram <- SplitNGram(threegram)
 fourgram  <- SplitNGram(fourgram)
 fivegram  <- SplitNGram(fivegram)
 
-save(onegram, twogram, threegram, fourgram, fivegram, file = 'ngrams_splitted.RData')
+save(onegram, twogram, threegram, fourgram, fivegram, file = 'ngrams_final.RData')
